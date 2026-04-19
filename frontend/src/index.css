@@ -1,0 +1,143 @@
+/* src/index.css */
+
+/* 1. Variáveis de Cor e Reset Global */
+:root {
+  --primary: #0056b3;
+  --primary-hover: #004494;
+  --bg-color: #f4f7f6;
+  --text-main: #333;
+  --card-bg: #ffffff;
+  --danger: #dc3545;
+  --success: #2e7d32;
+  --border-color: #e0e0e0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Estrutura e Navegação */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 15px 30px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  margin: 0;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 20px;
+  transition: opacity 0.2s;
+}
+
+.navbar-links a:hover {
+  opacity: 0.8;
+}
+
+/* 3. Cartões (Para o Mural) */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+  border-left: 6px solid var(--border-color); /* Fita lateral de status */
+  position: relative;
+}
+
+.card.status-resgatado {
+  border-left-color: var(--success);
+}
+.card.status-desaparecido {
+  border-left-color: var(--danger);
+}
+
+.card-title {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+
+.card-info {
+  margin: 5px 0;
+}
+.card-location {
+  color: var(--success);
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* 4. Formulários (Para o Dashboard) */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.form-control {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* 5. Botões */
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: white;
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+.btn-danger:hover {
+  background-color: #c82333;
+}
