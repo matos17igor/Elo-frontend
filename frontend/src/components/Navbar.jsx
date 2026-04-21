@@ -29,7 +29,12 @@ function Navbar() {
       >
         <Link to="/">Mural Público</Link>
 
-        {token && <Link to="/dashboard">Painel do Voluntário</Link>}
+        {token && (
+          <>
+            <Link to="/dashboard">Painel de Buscas</Link>
+            <Link to="/novo-abrigo">Cadastrar Abrigo</Link>
+          </>
+        )}
 
         {token ? (
           <div

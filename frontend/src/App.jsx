@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
-import Login from "./pages/Login"; // 1. Importando o Login
+import Login from "./pages/Login";
+import NovoAbrigo from "./pages/NovoAbrigo";
 import Navbar from "./components/Navbar";
 
 const PrivateRoute = ({ children }) => {
@@ -23,6 +24,14 @@ function App() {
           element={
             <PrivateRoute>
               <Dashboard />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/novo-abrigo"
+          element={
+            <PrivateRoute>
+              <NovoAbrigo />
             </PrivateRoute>
           }
         />

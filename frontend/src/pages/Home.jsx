@@ -54,6 +54,12 @@ function Home() {
             <p className="card-info">
               <strong>Último local:</strong> {person.ultimo_local}
             </p>
+            <p className="card-info">
+              <strong>Características:</strong> {person.caracteristicas}
+            </p>
+            <p className="card-info">
+              <strong>Telefone para contato:</strong> {person.telefone}
+            </p>
 
             {person.nome_abrigo && (
               <p className="card-location">
