@@ -2,18 +2,26 @@
 
 /* 1. Variáveis de Cor e Reset Global */
 :root {
-  --primary: #0056b3;
-  --primary-hover: #004494;
-  --bg-color: #f4f7f6;
-  --text-main: #333;
+  --primary: #1a365d;
+  --primary-hover: #2b6cb0;
+
+  /* Cores de Fundo */
+  --bg-color: #f7fafc;
   --card-bg: #ffffff;
-  --danger: #dc3545;
-  --success: #2e7d32;
-  --border-color: #e0e0e0;
+
+  /* Cores de Status */
+  --danger: #e53e3e;
+  --success: #38a169;
+  --alert: #dd6b20;
+
+  /* Textos e Bordas */
+  --text-main: #2d3748;
+  --text-muted: #718096;
+  --border-color: #e2e8f0;
 }
 
 body {
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--bg-color);
   color: var(--text-main);
   margin: 0;

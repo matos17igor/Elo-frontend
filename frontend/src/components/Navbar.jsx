@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import logoImg from "../assets/logo-elo.png"; //
 
 function Navbar() {
   const navigate = useNavigate();
@@ -14,7 +15,13 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <h2 className="navbar-brand">🔗 Sistema Elo</h2>
+      <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+        <img
+          src={logoImg}
+          alt="Logo do Sistema Elo"
+          style={{ height: "70px", objectFit: "contain" }}
+        />
+      </Link>
 
       <div
         className="navbar-links"
