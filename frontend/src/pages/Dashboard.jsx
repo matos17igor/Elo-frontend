@@ -29,7 +29,6 @@ function Dashboard() {
       const pacote = {
         ...formData,
         status: formData.location_id ? "RESGATADO" : "DESAPARECIDO",
-        usuario_id: 1,
       };
       await api.post("/persons", pacote);
       setMensagem("✅ Sucesso!");

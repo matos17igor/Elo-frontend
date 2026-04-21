@@ -5,6 +5,8 @@ function Home() {
   const [persons, setPersons] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const token = localStorage.getItem("token_elo");
+
   useEffect(() => {
     api
       .get("/persons")
@@ -59,12 +61,14 @@ function Home() {
               </p>
             )}
 
-            <button
-              className="btn btn-danger"
-              onClick={() => handleDelete(person.id)}
-            >
-              🗑️ Apagar Registro
-            </button>
+            {token && (
+              <button
+                className="btn btn-danger"
+                onClick={() => handleDelete(person.id)}
+              >
+                🗑️ Apagar Registro
+              </button>
+            )}
           </div>
         ))}
       </div>
