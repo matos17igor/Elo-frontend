@@ -87,7 +87,7 @@ npm run dev
 
 O site estará acessível no seu navegador, geralmente em http://localhost:5173.
 
-### ☁️ Arquitetura de Deploy
+## ☁️ Arquitetura de Deploy
 
 Este projeto está hospedado gratuitamente na nuvem utilizando os seguintes serviços:
 
@@ -95,7 +95,7 @@ Front-end: Hospedado na Vercel.
 
 Back-end: Hospedado no Render.
 
-⚠️ Atenção: Comportamento do Banco de Dados (Render Free Tier).
+### ⚠️ Atenção: Comportamento do Banco de Dados (Render Free Tier).
 Como este é um projeto acadêmico hospedado no plano gratuito do Render e utiliza o SQLite (um banco de dados baseado em arquivo local database.db), há uma limitação de infraestrutura importante a ser observada:
 
 Amnésia de Servidor (Disco Efêmero): O Render desliga a instância do servidor após 15 minutos sem receber requisições HTTP para economizar recursos.
